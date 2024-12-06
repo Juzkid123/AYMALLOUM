@@ -1,0 +1,489 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Logo Styling */
+.logo-image {
+  width: 350px;
+  /* Adjust the size as needed */
+  height: auto;
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 15px 30px;
+}
+
+/* Set a fixed height for the header */
+header {
+  height: 80px;
+  /* Adjust this value as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Vertically centers the logo and nav */
+  padding: 0 30px;
+  background-color: #333;
+}
+
+header .logo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+
+/* Hover Effect for Navigation Links */
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #f78f1e;
+  /* Change text color on hover */
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #f78f1e;
+  /* Color for underline */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  /* Full underline on hover */
+}
+
+.edit {
+  position: fixed;      /* Fixes the navbar at the top */
+  top: 0;               /* Position it at the very top of the viewport */
+  width: 100%;          /* Make sure it stretches across the full width */
+  background-color: #1a227e; /* Ensure a background color so it's visible */
+  color: white;         /* Text color */
+  z-index: 1000;        /* High z-index to ensure it's always on top of other elements */
+  padding: 15px 20px;   /* Padding to give some space inside the navbar */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow to ensure visibility */
+}
+
+/* Adjust the body so content doesn't overlap with the navbar */
+body {
+  padding-top: 70px; /* Adjust this based on the height of your navbar */
+}
+
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  text-decoration: none;
+  background-color: #f78f1e;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+#services {
+  padding: 50px 30px;
+  background-color: white;
+  text-align: center;
+}
+
+.service-box {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f78f1e;
+}
+
+.service {
+  width: 30%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.service img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* About Section */
+#about {
+  padding: 50px 30px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-content img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.about-content p {
+  width: 50%;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Tracking Section */
+#tracking {
+  padding: 50px 30px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#tracking form {
+  margin-top: 20px;
+}
+
+#tracking input {
+  padding: 10px;
+  font-size: 1.1rem;
+  width: 300px;
+  margin-right: 10px;
+}
+
+#tracking button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #f78f1e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 30px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+#contact form {
+  margin-top: 20px;
+}
+
+#contact input,
+#contact textarea {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+#contact button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #1a237e; /* Matches the navbar color */
+  color: white;
+  padding: 30px 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-section {
+  width: 25%;
+  padding: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FFD700; /* Changes to gold on hover */
+}
+
+/* Legal Links Styles */
+.footer-legal {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-legal a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.footer-legal a:hover {
+  color: #FFD700; /* Changes to gold on hover */
+}
+
+.footer {
+  background-color: #263238; /* Adjust your footer color */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  /* margin-top: 15%;
+  margin-bottom: 0%; */
+  /* left: 0; */
+  width: 100%;
+}
+
+
+/* AI Chatbot Styles */
+.ai-chatbot {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #263238; /* Darker blue for contrast */
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  justify-content: center;
+}
+
+.chatbot-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* AI Chatbot Positioning */
+.ai-chatbot {
+  position: fixed; /* Fix it to the viewport */
+  bottom: 20px;    /* Distance from the bottom */
+  right: 20px;     /* Distance from the right */
+  background-color: #263238; /* Darker blue for contrast */
+  padding: 10px;
+  border-radius: 10px;
+  display: none;  /* Initially hidden */
+  width: 300px;   /* Chatbot box width */
+  max-width: 90%;
+  z-index: 1000;  /* Ensure it stays on top */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.chatbot-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.ai-chatbot p {
+  color: white;
+  font-size: 14px;
+}
+
+
+/* Ensure footer doesn't overlap with body */
+body {
+  padding-bottom: 150px; /* Adjust if needed */
+}
+
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+      transform: translateX(-100%); /* End off the left */
+  }
+}
+
+.services-container {
+  display: flex; /* Flexbox for horizontal layout */
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent wrapping */
+  animation: scroll 10s linear infinite; /* Animate */
+}
+
+.service-item {
+  display: inline-block; /* Keep items in line */
+  padding: 20px; /* Padding for each item */
+  /* Optional styling */
+  background-color: #f2f2f2; /* Background color for visibility */
+  margin: 0 10px; /* Margin between items */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.hero-section {
+    position: relative;
+    height: 400px; /* Adjust as needed */
+    overflow: hidden; /* Hide overflowing images */
+}
+
+.hero-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-images img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+.hero-images img.active {
+    opacity: 1; /* Only the active image is visible */
+}
+
+/* changes made */
+.hero-section {
+  position: relative;
+  height: 400px; /* Adjust as needed */
+  overflow: hidden; /* Hide overflowing images */
+}
+
+.hero-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-images img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+.hero-images img.active {
+  opacity: 1; /* Only the active image is visible */
+}
+
+
